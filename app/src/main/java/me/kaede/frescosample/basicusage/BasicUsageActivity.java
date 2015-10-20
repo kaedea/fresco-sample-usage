@@ -29,8 +29,11 @@ public class BasicUsageActivity extends AppCompatActivity {
 		handler.postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				((SimpleDraweeView)BasicUsageActivity.this.findViewById(R.id.drawee_basic_placeholder)).setImageURI(Uri.parse("http://duang.de/content/images/2015/10/22886092.jpg"));
+				((SimpleDraweeView) BasicUsageActivity.this.findViewById(R.id.drawee_basic_placeholder)).setImageURI(Uri.parse("http://duang.de/content/images/2015/10/22886092.jpg"));
 			}
-		},2000);
+		}, 2000);
+
+		// Fade Duration
+		((SimpleDraweeView)findViewById(R.id.drawee_basic_fade)).setImageURI(Uri.parse("http://duang.de/content/images/2015/10/22886090.jpg"));
 	}
 }
