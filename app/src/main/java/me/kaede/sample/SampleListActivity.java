@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import me.kaede.frescosample.R;
+import me.kaede.frescosample.basicusage.BasicUsageActivity;
 
 public class SampleListActivity extends AppCompatActivity {
     ActivityHolder activityHolder;
@@ -27,7 +28,7 @@ public class SampleListActivity extends AppCompatActivity {
         MyAdapter adapter = new MyAdapter();
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
-        activityHolder.addActivity("Main Activity", SampleListActivity.class);
+        activityHolder.addActivity("Basic Usage", BasicUsageActivity.class);
         adapter.notifyDataSetChanged();
     }
 
