@@ -18,15 +18,15 @@ public class FrescoApplication extends Application {
 		super.onCreate();
 
 		FLog.setMinimumLoggingLevel(FLog.VERBOSE);
-		Fresco.initialize(this);
-		/*DiskCacheConfig diskCacheConfig = DiskCacheConfig.newBuilder()
+		//Fresco.initialize(this);
+		DiskCacheConfig diskCacheConfig = DiskCacheConfig.newBuilder()
 				.setBaseDirectoryPath(new File(Environment.getExternalStorageDirectory().getAbsoluteFile(),"Moe Studio"))
 				.setBaseDirectoryName("fresco_sample")
-				.setMaxCacheSize(20*1024)/data/data/me.kaede.frescosample/cache/image_cache
+				.setMaxCacheSize(20*1024)
 				.build();
 		ImagePipelineConfig imagePipelineConfig = ImagePipelineConfig.newBuilder(this)//
 				.setMainDiskCacheConfig(diskCacheConfig)
 				.build();
-		Fresco.initialize(this, imagePipelineConfig);*/
+		Fresco.initialize(this, imagePipelineConfig);
 	}
 }

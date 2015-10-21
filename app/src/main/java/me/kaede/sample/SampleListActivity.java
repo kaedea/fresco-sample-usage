@@ -12,6 +12,8 @@ import android.widget.TextView;
 import me.kaede.frescosample.R;
 import me.kaede.frescosample.basicusage.BasicUsageActivity;
 import me.kaede.frescosample.gif.GifActivity;
+import me.kaede.frescosample.listener.ListenerActivity;
+import me.kaede.frescosample.lowres.LowResActivity;
 
 public class SampleListActivity extends AppCompatActivity {
     ActivityHolder activityHolder;
@@ -31,6 +33,8 @@ public class SampleListActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
         activityHolder.addActivity("Basic Usage", BasicUsageActivity.class);
         activityHolder.addActivity("Gif/WebP Animation Image", GifActivity.class);
+        activityHolder.addActivity("LowRes Image", LowResActivity.class);
+        activityHolder.addActivity("Controller Listener", ListenerActivity.class);
         adapter.notifyDataSetChanged();
     }
 

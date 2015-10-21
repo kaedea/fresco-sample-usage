@@ -32,6 +32,8 @@
         </activity>
         <activity android:name=".lowres.LowResActivity">
         </activity>
+        <activity android:name=".listener.ListenerActivity">
+        </activity>
     </application>
 
 </manifest>
