@@ -36,6 +36,8 @@
         </activity>
         <activity android:name=".progressivejpg.ProgressiveJPGActivity">
         </activity>
+        <activity android:name=".resize.ResizeActivity">
+        </activity>
     </application>
 
 </manifest>
