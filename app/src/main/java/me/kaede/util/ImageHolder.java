@@ -4,6 +4,8 @@ import android.util.Log;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by kaede on 2015/10/21.
@@ -17,12 +19,11 @@ public class ImageHolder {
 	String extension = ".jpg";
 	int maxIndex = Integer.MAX_VALUE;
 	String indexFormat = "00";
+
 	DecimalFormat formatter;
 
-
-	public ImageHolder(String domain, int maxIndex) {
+	public ImageHolder(String domain) {
 		this.domain = domain;
-		this.maxIndex = maxIndex;
 		init();
 
 	}
@@ -48,9 +49,34 @@ public class ImageHolder {
 		StringBuilder sb = new StringBuilder(domain);
 		if (baseDir!=null) sb.append("/").append(baseDir);
 		if (categroy!=null) sb.append("/").append(categroy);
-		if (prefix!=null) sb.append("/").append(prefix);
+		if (prefix!=null) sb.append("/").append(prefix);else sb.append("/");
 		String url = sb.append(formatter.format(index)).append(extension).toString();
 		Log.v("ImageHolder","[getUrl] url = "+url);
+		return url;
+	}
+
+	public String getUrlByName(String name){
+		if (name==null||name.length()<=0)return null;
+		if (domain==null)return null;
+		StringBuilder sb = new StringBuilder(domain);
+		if (baseDir!=null) sb.append("/").append(baseDir);
+		if (categroy!=null) sb.append("/").append(categroy);
+		if (prefix!=null) sb.append("/").append(prefix);else sb.append("/");
+		String url = sb.append(name).append(extension).toString();
+		Log.v("ImageHolder","[getUrlByName] url = "+url);
+		return url;
+	}
+
+	public String getUrlByName(String name,String extension){
+		if (name==null||name.length()<=0)return null;
+		if (extension==null||extension.length()<=0)return null;
+		if (domain==null)return null;
+		StringBuilder sb = new StringBuilder(domain);
+		if (baseDir!=null) sb.append("/").append(baseDir);
+		if (categroy!=null) sb.append("/").append(categroy);
+		if (prefix!=null) sb.append("/").append(prefix);else sb.append("/");
+		String url = sb.append(name).append(extension).toString();
+		Log.v("ImageHolder","[getUrlByName] url = "+url);
 		return url;
 	}
 }

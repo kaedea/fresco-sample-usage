@@ -7,7 +7,9 @@ import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import com.facebook.drawee.view.DraweeView;
+import com.facebook.common.util.UriUtil;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import me.kaede.frescosample.ImageApi;
 import me.kaede.frescosample.R;
@@ -23,14 +25,24 @@ public class BasicUsageActivity extends AppCompatActivity {
 		Toolbar toolbar = (Toolbar) this.findViewById(R.id.toolbar);
 		this.setSupportActionBar(toolbar);
 
-		// SimpleDraweeView
-		SimpleDraweeView draweeView = (SimpleDraweeView) this.findViewById(R.id.drawee_basic);
+		SimpleDraweeView draweeView;
+		DraweeController controller;
+
+		// basic
+		draweeView = (SimpleDraweeView) this.findViewById(R.id.drawee_basic);
 		draweeView.setImageURI(Uri.parse(ImageApi.jk.getUrl(0)));
 
-		// SimpleDraweeView
-		SimpleDraweeView draweeViewFocus = (SimpleDraweeView) this.findViewById(R.id.drawee_basic_focus);
-		draweeViewFocus.getHierarchy().setActualImageFocusPoint(new PointF(0,0));
-		draweeViewFocus.setImageURI(Uri.parse(ImageApi.jk.getUrl(0)));
+		// ScaleType FocusCrop
+		draweeView = (SimpleDraweeView) this.findViewById(R.id.drawee_basic_focus);
+		draweeView.getHierarchy().setActualImageFocusPoint(new PointF(0,0));
+		draweeView.setImageURI(Uri.parse(ImageApi.jk.getUrl(0)));
+
+		// ScaleType Tile
+		Uri uri = new Uri.Builder()
+				.scheme(UriUtil.LOCAL_RESOURCE_SCHEME) // "res"
+				.path(String.valueOf(R.drawable.pattern))
+				.build();
+		((SimpleDraweeView)findViewById(R.id.drawee_basic_tile)).setImageURI(uri);
 
 		// Placeholder Image
 		handler.postDelayed(new Runnable() {
@@ -48,5 +60,16 @@ public class BasicUsageActivity extends AppCompatActivity {
 
 		// Circle
 		((SimpleDraweeView)findViewById(R.id.drawee_basic_circle)).setImageURI(Uri.parse(ImageApi.jk.getUrl(4)));
+
+		// Failure Image
+		((SimpleDraweeView)findViewById(R.id.drawee_basic_failure)).setImageURI(Uri.parse(ImageApi.other.getUrlByName("does-not-have-this-url")));
+
+		// Retry Image
+		draweeView = ((SimpleDraweeView)findViewById(R.id.drawee_basic_retry));
+		controller = Fresco.newDraweeControllerBuilder()
+				.setUri(Uri.parse(ImageApi.other.getUrlByName("does-not-have-this-url")))
+				.setTapToRetryEnabled(true)
+				.build();
+		draweeView.setController(controller);
 	}
 }
