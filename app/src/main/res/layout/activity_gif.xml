@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="me.kaede.frescosample.gif.GifActivity">
+        <com.facebook.drawee.view.DraweeView android:id="@+id/drawee_gif" android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+</RelativeLayout>
