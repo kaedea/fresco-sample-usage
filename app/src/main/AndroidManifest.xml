@@ -38,6 +38,8 @@
         </activity>
         <activity android:name=".resize.ResizeActivity">
         </activity>
+        <activity android:name=".postprocessor.PostprocessorActivity">
+        </activity>
     </application>
 
 </manifest>
