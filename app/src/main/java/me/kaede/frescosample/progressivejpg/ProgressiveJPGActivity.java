@@ -1,8 +1,8 @@
-package me.kaede.frescosample.lowres;
+package me.kaede.frescosample.progressivejpg;
 
 import android.net.Uri;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.drawable.ProgressBarDrawable;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
@@ -10,10 +10,11 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.request.ImageRequest;
+import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import me.kaede.frescosample.ImageApi;
 import me.kaede.frescosample.R;
 
-public class LowResActivity extends AppCompatActivity {
+public class ProgressiveJPGActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +22,15 @@ public class LowResActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_gif);
 
 		SimpleDraweeView draweeView = (SimpleDraweeView) this.findViewById(R.id.drawee_gif);
+
+		ImageRequest request = ImageRequestBuilder.newBuilderWithSource(Uri.parse(ImageApi.other.getUrlByName("lowres-big", ".jpg")))
+				.setAutoRotateEnabled(true)
+				.setLocalThumbnailPreviewsEnabled(true)
+				.setProgressiveRenderingEnabled(true)
+				.build();
+
 		DraweeController controller = Fresco.newDraweeControllerBuilder()
-				.setUri(Uri.parse(ImageApi.other.getUrlByName("lowres-big", ".jpg")))
-				.setLowResImageRequest(ImageRequest.fromUri(Uri.parse(ImageApi.other.getUrlByName("lowres-small", ".jpg"))))
-				.setTapToRetryEnabled(true)
+				.setImageRequest(request)
 				.build();
 		draweeView.setController(controller);
 

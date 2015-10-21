@@ -14,6 +14,7 @@ import me.kaede.frescosample.basicusage.BasicUsageActivity;
 import me.kaede.frescosample.gif.GifActivity;
 import me.kaede.frescosample.listener.ListenerActivity;
 import me.kaede.frescosample.lowres.LowResActivity;
+import me.kaede.frescosample.progressivejpg.ProgressiveJPGActivity;
 
 public class SampleListActivity extends AppCompatActivity {
     ActivityHolder activityHolder;
@@ -35,6 +36,7 @@ public class SampleListActivity extends AppCompatActivity {
         activityHolder.addActivity("Gif/WebP Animation Image", GifActivity.class);
         activityHolder.addActivity("LowRes Image", LowResActivity.class);
         activityHolder.addActivity("Controller Listener", ListenerActivity.class);
+        activityHolder.addActivity("Progressive JPG Streaming", ProgressiveJPGActivity.class);
         adapter.notifyDataSetChanged();
     }
 

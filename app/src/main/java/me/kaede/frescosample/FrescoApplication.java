@@ -22,9 +22,9 @@ public class FrescoApplication extends Application {
 		DiskCacheConfig diskCacheConfig = DiskCacheConfig.newBuilder()
 				.setBaseDirectoryPath(new File(Environment.getExternalStorageDirectory().getAbsoluteFile(),"Moe Studio"))
 				.setBaseDirectoryName("fresco_sample")
-				.setMaxCacheSize(20*1024)
+				.setMaxCacheSize(200*1024)
 				.build();
-		ImagePipelineConfig imagePipelineConfig = ImagePipelineConfig.newBuilder(this)//
+		ImagePipelineConfig imagePipelineConfig = ImagePipelineConfig.newBuilder(this)
 				.setMainDiskCacheConfig(diskCacheConfig)
 				.build();
 		Fresco.initialize(this, imagePipelineConfig);

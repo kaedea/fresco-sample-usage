@@ -34,6 +34,8 @@
         </activity>
         <activity android:name=".listener.ListenerActivity">
         </activity>
+        <activity android:name=".progressivejpg.ProgressiveJPGActivity">
+        </activity>
     </application>
 
 </manifest>
