@@ -26,7 +26,11 @@
                 android:label="Basic Usage"
                 android:theme="@style/NoActionBar">
         </activity>
-        <activity android:name=".gif.GifActivity" android:label="Animation Image">
+        <activity
+                android:name=".gif.GifActivity"
+                android:label="Animation Image">
+        </activity>
+        <activity android:name=".lowres.LowResActivity">
         </activity>
     </application>
 

@@ -30,7 +30,7 @@ public class SampleListActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
         activityHolder.addActivity("Basic Usage", BasicUsageActivity.class);
-        activityHolder.addActivity("Gif/WebP Animation", GifActivity.class);
+        activityHolder.addActivity("Gif/WebP Animation Image", GifActivity.class);
         adapter.notifyDataSetChanged();
     }
 

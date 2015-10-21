@@ -38,7 +38,7 @@ public class BasicUsageActivity extends AppCompatActivity {
 
 		// ScaleType FocusCrop
 		draweeView = (SimpleDraweeView) this.findViewById(R.id.drawee_basic_focus);
-		draweeView.getHierarchy().setActualImageFocusPoint(new PointF(0,0));
+		draweeView.getHierarchy().setActualImageFocusPoint(new PointF(0, 0));
 		draweeView.setImageURI(Uri.parse(ImageApi.jk.getUrl(0)));
 
 		// ScaleType Tile
@@ -46,7 +46,7 @@ public class BasicUsageActivity extends AppCompatActivity {
 				.scheme(UriUtil.LOCAL_RESOURCE_SCHEME) // "res"
 				.path(String.valueOf(R.drawable.pattern))
 				.build();
-		((SimpleDraweeView)findViewById(R.id.drawee_basic_tile)).setImageURI(uri);
+		((SimpleDraweeView) findViewById(R.id.drawee_basic_tile)).setImageURI(uri);
 
 		// Placeholder Image
 		handler.postDelayed(new Runnable() {
@@ -57,19 +57,19 @@ public class BasicUsageActivity extends AppCompatActivity {
 		}, 2000);
 
 		// Fade Duration
-		((SimpleDraweeView)findViewById(R.id.drawee_basic_fade)).setImageURI(Uri.parse(ImageApi.jk.getUrl(2)));
+		((SimpleDraweeView) findViewById(R.id.drawee_basic_fade)).setImageURI(Uri.parse(ImageApi.jk.getUrl(2)));
 
 		// Corner Radius
-		((SimpleDraweeView)findViewById(R.id.drawee_basic_radius)).setImageURI(Uri.parse(ImageApi.jk.getUrl(3)));
+		((SimpleDraweeView) findViewById(R.id.drawee_basic_radius)).setImageURI(Uri.parse(ImageApi.jk.getUrl(3)));
 
 		// Circle
-		((SimpleDraweeView)findViewById(R.id.drawee_basic_circle)).setImageURI(Uri.parse(ImageApi.jk.getUrl(4)));
+		((SimpleDraweeView) findViewById(R.id.drawee_basic_circle)).setImageURI(Uri.parse(ImageApi.jk.getUrl(4)));
 
 		// Failure Image
-		((SimpleDraweeView)findViewById(R.id.drawee_basic_failure)).setImageURI(Uri.parse(ImageApi.other.getUrlByName("does-not-have-this-url")));
+		((SimpleDraweeView) findViewById(R.id.drawee_basic_failure)).setImageURI(Uri.parse(ImageApi.other.getUrlByName("does-not-have-this-url")));
 
 		// Retry Image
-		draweeView = ((SimpleDraweeView)findViewById(R.id.drawee_basic_retry));
+		draweeView = ((SimpleDraweeView) findViewById(R.id.drawee_basic_retry));
 		controller = Fresco.newDraweeControllerBuilder()
 				.setUri(Uri.parse(ImageApi.other.getUrlByName("does-not-have-this-url")))
 				.setTapToRetryEnabled(true)
@@ -77,9 +77,8 @@ public class BasicUsageActivity extends AppCompatActivity {
 		draweeView.setController(controller);
 
 		// ProgressBar Image
-		draweeView = ((SimpleDraweeView)findViewById(R.id.drawee_basic_progressbar));
-		GenericDraweeHierarchyBuilder builder =
-				new GenericDraweeHierarchyBuilder(getResources());
+		draweeView = ((SimpleDraweeView) findViewById(R.id.drawee_basic_progressbar));
+		GenericDraweeHierarchyBuilder builder = new GenericDraweeHierarchyBuilder(getResources());
 		GenericDraweeHierarchy hierarchy = builder
 				.setProgressBarImage(new ProgressBarDrawable())
 				.build();
@@ -87,13 +86,13 @@ public class BasicUsageActivity extends AppCompatActivity {
 		draweeView.setImageURI(Uri.parse(ImageApi.jk.getUrl(5)));
 
 		// Background Image
-		((SimpleDraweeView)findViewById(R.id.drawee_basic_backround)).setImageURI(Uri.parse(ImageApi.jk.getUrl(6)));
+		((SimpleDraweeView) findViewById(R.id.drawee_basic_backround)).setImageURI(Uri.parse(ImageApi.jk.getUrl(6)));
 
 		// Overlay Image
-		((SimpleDraweeView)findViewById(R.id.drawee_basic_overlay)).setImageURI(Uri.parse(ImageApi.jk.getUrl(7)));
+		((SimpleDraweeView) findViewById(R.id.drawee_basic_overlay)).setImageURI(Uri.parse(ImageApi.jk.getUrl(7)));
 
 		// PressedStateOverlay Image
-		draweeView = ((SimpleDraweeView)findViewById(R.id.drawee_basic_press));
+		draweeView = ((SimpleDraweeView) findViewById(R.id.drawee_basic_press));
 		draweeView.setImageURI(Uri.parse(ImageApi.jk.getUrl(8)));
 		draweeView.setOnClickListener(new View.OnClickListener() {
 			@Override
