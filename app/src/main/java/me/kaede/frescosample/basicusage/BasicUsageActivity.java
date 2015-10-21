@@ -7,8 +7,12 @@ import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import com.facebook.common.util.UriUtil;
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.drawable.ProgressBarDrawable;
+import com.facebook.drawee.generic.GenericDraweeHierarchy;
+import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import me.kaede.frescosample.ImageApi;
@@ -71,5 +75,32 @@ public class BasicUsageActivity extends AppCompatActivity {
 				.setTapToRetryEnabled(true)
 				.build();
 		draweeView.setController(controller);
+
+		// ProgressBar Image
+		draweeView = ((SimpleDraweeView)findViewById(R.id.drawee_basic_progressbar));
+		GenericDraweeHierarchyBuilder builder =
+				new GenericDraweeHierarchyBuilder(getResources());
+		GenericDraweeHierarchy hierarchy = builder
+				.setProgressBarImage(new ProgressBarDrawable())
+				.build();
+		draweeView.setHierarchy(hierarchy);
+		draweeView.setImageURI(Uri.parse(ImageApi.jk.getUrl(5)));
+
+		// Background Image
+		((SimpleDraweeView)findViewById(R.id.drawee_basic_backround)).setImageURI(Uri.parse(ImageApi.jk.getUrl(6)));
+
+		// Overlay Image
+		((SimpleDraweeView)findViewById(R.id.drawee_basic_overlay)).setImageURI(Uri.parse(ImageApi.jk.getUrl(7)));
+
+		// PressedStateOverlay Image
+		draweeView = ((SimpleDraweeView)findViewById(R.id.drawee_basic_press));
+		draweeView.setImageURI(Uri.parse(ImageApi.jk.getUrl(8)));
+		draweeView.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+			}
+		});
 	}
+
 }

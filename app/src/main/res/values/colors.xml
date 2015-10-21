@@ -4,5 +4,8 @@
     <color name="textColorPrimary">@android:color/white</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
     <color name="placeHolder">#BDBDBD</color>
+    <color name="overlay">#553F51B5</color>
+    <color name="pressState">#55FF4081</color>
 </resources>
