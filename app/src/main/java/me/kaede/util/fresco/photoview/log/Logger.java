@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package me.kaede.widget.photoview.log;
+package me.kaede.util.fresco.photoview.log;
 
 /**
  * interface for a logger class to replace the static calls to {@link android.util.Log}

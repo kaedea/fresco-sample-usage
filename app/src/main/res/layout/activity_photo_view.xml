@@ -5,10 +5,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="me.kaede.frescosample.photoview.PhotoViewActivity">
-    <me.kaede.widget.photoview.HackyViewPager android:layout_width="match_parent"
+    <me.kaede.util.fresco.photoview.HackyViewPager android:layout_width="match_parent"
                                        android:layout_height="match_parent"
                                        android:id="@+id/viewpager"
             >
-    </me.kaede.widget.photoview.HackyViewPager>
+    </me.kaede.util.fresco.photoview.HackyViewPager>
 
 </RelativeLayout>

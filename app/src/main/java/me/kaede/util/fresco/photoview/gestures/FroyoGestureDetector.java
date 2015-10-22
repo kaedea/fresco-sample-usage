@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package me.kaede.widget.photoview.gestures;
+package me.kaede.util.fresco.photoview.gestures;
 
 import android.annotation.TargetApi;
 import android.content.Context;

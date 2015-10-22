@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package me.kaede.widget.photoview.gestures;
+package me.kaede.util.fresco.photoview.gestures;
 
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.view.MotionEvent;
 
-import me.kaede.widget.photoview.Compat;
+import me.kaede.util.fresco.photoview.Compat;
 
 @TargetApi(5)
 public class EclairGestureDetector extends CupcakeGestureDetector {

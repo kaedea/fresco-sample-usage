@@ -6,8 +6,8 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/frescosample/recyclerview/recyclerview/RecyclerViewFragment.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/CustomProgressbarDrawable.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/ImageDownloadListener.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/photoview/HackyViewPager.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/widget/photoview/CustomProgressbarDrawable.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/widget/photoview/HackyViewPager.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/widget/photoview/ImageDownloadListener.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

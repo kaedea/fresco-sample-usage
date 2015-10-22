@@ -1,4 +1,4 @@
-package me.kaede.sample;
+package me.kaede.frescosample.samplelist;
 
 import android.app.Activity;
 import android.content.Context;

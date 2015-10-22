@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package me.kaede.widget.photoview.gestures;
+package me.kaede.util.fresco.photoview.gestures;
 
 import android.content.Context;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.ViewConfiguration;
 
-import me.kaede.widget.photoview.log.LogManager;
+import me.kaede.util.fresco.photoview.log.LogManager;
 
 public class CupcakeGestureDetector implements GestureDetector {
 

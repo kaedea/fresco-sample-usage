@@ -1,4 +1,4 @@
-package me.kaede.widget.photoview.gestures;
+package me.kaede.util.fresco.photoview.gestures;
 
 /*******************************************************************************
  * Copyright 2011, 2012 Chris Banes.

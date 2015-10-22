@@ -1,4 +1,4 @@
-package me.kaede.widget.photoview;
+package me.kaede.util.fresco.photoview;
 
 import android.graphics.RectF;
 import android.view.GestureDetector;

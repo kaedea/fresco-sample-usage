@@ -13,18 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package me.kaede.widget.photoview.gestures;
+package me.kaede.util.fresco.photoview.scrollerproxy;
 
-import android.view.MotionEvent;
+import android.annotation.TargetApi;
+import android.content.Context;
 
-public interface GestureDetector {
+@TargetApi(14)
+public class IcsScroller extends GingerScroller {
 
-    public boolean onTouchEvent(MotionEvent ev);
+    public IcsScroller(Context context) {
+        super(context);
+    }
 
-    public boolean isScaling();
-
-    public boolean isDragging();
-
-    public void setOnGestureListener(OnGestureListener listener);
+    @Override
+    public boolean computeScrollOffset() {
+        return mScroller.computeScrollOffset();
+    }
 
 }

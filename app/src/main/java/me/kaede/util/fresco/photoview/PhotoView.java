@@ -13,8 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package me.kaede.widget.photoview;
+package me.kaede.util.fresco.photoview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -45,9 +46,6 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder;
 
 import me.kaede.util.fresco.CustomProgressbarDrawable;
 import me.kaede.util.fresco.ImageDownloadListener;
-import me.kaede.widget.photoview.PhotoViewAttacher.OnMatrixChangedListener;
-import me.kaede.widget.photoview.PhotoViewAttacher.OnPhotoTapListener;
-import me.kaede.widget.photoview.PhotoViewAttacher.OnViewTapListener;
 
 public class PhotoView extends ImageView implements IPhotoView, ImageDownloadListener {
 
@@ -248,7 +246,7 @@ public class PhotoView extends ImageView implements IPhotoView, ImageDownloadLis
     }
 
     @Override
-    public void setOnMatrixChangeListener(OnMatrixChangedListener listener) {
+    public void setOnMatrixChangeListener(PhotoViewAttacher.OnMatrixChangedListener listener) {
         mAttacher.setOnMatrixChangeListener(listener);
     }
 
@@ -258,22 +256,22 @@ public class PhotoView extends ImageView implements IPhotoView, ImageDownloadLis
     }
 
     @Override
-    public void setOnPhotoTapListener(OnPhotoTapListener listener) {
+    public void setOnPhotoTapListener(PhotoViewAttacher.OnPhotoTapListener listener) {
         mAttacher.setOnPhotoTapListener(listener);
     }
 
     @Override
-    public OnPhotoTapListener getOnPhotoTapListener() {
+    public PhotoViewAttacher.OnPhotoTapListener getOnPhotoTapListener() {
         return mAttacher.getOnPhotoTapListener();
     }
 
     @Override
-    public void setOnViewTapListener(OnViewTapListener listener) {
+    public void setOnViewTapListener(PhotoViewAttacher.OnViewTapListener listener) {
         mAttacher.setOnViewTapListener(listener);
     }
 
     @Override
-    public OnViewTapListener getOnViewTapListener() {
+    public PhotoViewAttacher.OnViewTapListener getOnViewTapListener() {
         return mAttacher.getOnViewTapListener();
     }
 
@@ -350,7 +348,7 @@ public class PhotoView extends ImageView implements IPhotoView, ImageDownloadLis
         if (dr == mDraweeHolder.getHierarchy().getTopLevelDrawable()) {
             return true;
         }
-        return false;
+        return super.verifyDrawable(dr);
     }
 
     @Override

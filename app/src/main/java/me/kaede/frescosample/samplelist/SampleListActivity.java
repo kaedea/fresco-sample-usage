@@ -1,4 +1,4 @@
-package me.kaede.sample;
+package me.kaede.frescosample.samplelist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

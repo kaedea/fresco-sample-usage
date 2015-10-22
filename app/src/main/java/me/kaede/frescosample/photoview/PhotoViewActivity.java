@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import me.kaede.frescosample.ImageApi;
 import me.kaede.frescosample.R;
-import me.kaede.widget.photoview.HackyViewPager;
-import me.kaede.widget.photoview.PhotoView;
+import me.kaede.util.fresco.photoview.HackyViewPager;
+import me.kaede.util.fresco.photoview.PhotoView;
 
 import java.util.List;
 

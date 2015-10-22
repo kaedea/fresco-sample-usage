@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package me.kaede.widget.photoview;
+package me.kaede.util.fresco.photoview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -36,10 +36,10 @@ import android.widget.ImageView.ScaleType;
 
 import java.lang.ref.WeakReference;
 
-import me.kaede.widget.photoview.gestures.OnGestureListener;
-import me.kaede.widget.photoview.gestures.VersionedGestureDetector;
-import me.kaede.widget.photoview.log.LogManager;
-import me.kaede.widget.photoview.scrollerproxy.ScrollerProxy;
+import me.kaede.util.fresco.photoview.gestures.OnGestureListener;
+import me.kaede.util.fresco.photoview.gestures.VersionedGestureDetector;
+import me.kaede.util.fresco.photoview.log.LogManager;
+import me.kaede.util.fresco.photoview.scrollerproxy.ScrollerProxy;
 
 import static android.view.MotionEvent.ACTION_CANCEL;
 import static android.view.MotionEvent.ACTION_DOWN;
@@ -125,7 +125,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
 
     // Gesture Detectors
     private GestureDetector mGestureDetector;
-    private me.kaede.widget.photoview.gestures.GestureDetector mScaleDragDetector;
+    private me.kaede.util.fresco.photoview.gestures.GestureDetector mScaleDragDetector;
 
     // These are set so we don't keep allocating them on the heap
     private final Matrix mBaseMatrix = new Matrix();

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package me.kaede.widget.photoview;
+package me.kaede.util.fresco.photoview;
 
 import android.annotation.TargetApi;
 import android.os.Build;
