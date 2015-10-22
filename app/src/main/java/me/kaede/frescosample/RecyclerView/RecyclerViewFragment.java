@@ -56,10 +56,10 @@ public class RecyclerViewFragment extends Fragment{
 		switch (index) {
 			case 0:
 			default:
-				datas = ImageApi.girly.getUrls();
+				datas = ImageApi.jk.getUrls();
 				break;
 			case 1:
-				datas = ImageApi.jk.getUrls();
+				datas = ImageApi.girly.getUrls();
 				break;
 			case 2:
 				datas = ImageApi.legs.getUrls();
