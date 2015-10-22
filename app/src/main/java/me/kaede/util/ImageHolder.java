@@ -4,7 +4,9 @@ import android.util.Log;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -53,6 +55,15 @@ public class ImageHolder {
 		String url = sb.append(formatter.format(index)).append(extension).toString();
 		Log.i("ImageHolder","[getUrl] url = "+url);
 		return url;
+	}
+
+	public List<String> getUrls(){
+		List<String> urls = new ArrayList<>();
+		if (maxIndex == Integer.MAX_VALUE) return urls;
+		for (int i = 0; i<= maxIndex; i++){
+			urls.add(getUrl(i));
+		}
+		return urls;
 	}
 
 	public String getUrlByName(String name){

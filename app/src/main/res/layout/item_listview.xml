@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:gravity="center_vertical"
+              tools:background="#eee"
+              android:layout_height="wrap_content">
+    <Space android:layout_width="match_parent" android:layout_height="4dp"/>
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        card_view:cardCornerRadius="0dp"
+            >
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@+id/draweeview" android:layout_width="match_parent"
+                                                   android:layout_height="150dp"/>
+    </android.support.v7.widget.CardView>
+    <Space android:layout_width="match_parent" android:layout_height="4dp"/>
+
+</LinearLayout>

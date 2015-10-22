@@ -13,6 +13,7 @@ import me.kaede.frescosample.R;
 import me.kaede.frescosample.basicusage.BasicUsageActivity;
 import me.kaede.frescosample.gif.GifActivity;
 import me.kaede.frescosample.listener.ListenerActivity;
+import me.kaede.frescosample.listview.ListViewActivity;
 import me.kaede.frescosample.lowres.LowResActivity;
 import me.kaede.frescosample.postprocessor.PostprocessorActivity;
 import me.kaede.frescosample.progressivejpg.ProgressiveJPGActivity;
@@ -41,6 +42,7 @@ public class SampleListActivity extends AppCompatActivity {
         activityHolder.addActivity("Progressive JPG Streaming", ProgressiveJPGActivity.class);
         activityHolder.addActivity("Resize Image", ResizeActivity.class);
         activityHolder.addActivity("Postprocessor", PostprocessorActivity.class);
+        activityHolder.addActivity("ListView", ListViewActivity.class);
         adapter.notifyDataSetChanged();
     }
 

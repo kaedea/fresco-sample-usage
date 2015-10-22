@@ -40,6 +40,8 @@
         </activity>
         <activity android:name=".postprocessor.PostprocessorActivity">
         </activity>
+        <activity android:name=".listview.ListViewActivity">
+        </activity>
     </application>
 
 </manifest>
