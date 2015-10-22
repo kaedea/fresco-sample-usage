@@ -10,7 +10,6 @@ import com.facebook.common.logging.FLog;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.controller.BaseControllerListener;
 import com.facebook.drawee.controller.ControllerListener;
-import com.facebook.drawee.drawable.ProgressBarDrawable;
 import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
@@ -18,7 +17,6 @@ import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.image.ImageInfo;
 import com.facebook.imagepipeline.image.QualityInfo;
-import com.facebook.imagepipeline.request.ImageRequest;
 import me.kaede.frescosample.ImageApi;
 import me.kaede.frescosample.R;
 
@@ -27,7 +25,7 @@ public class ListenerActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_gif);
+		setContentView(R.layout.activity_simple);
 
 		ControllerListener controllerListener = new BaseControllerListener<ImageInfo>() {
 			@Override
@@ -60,7 +58,7 @@ public class ListenerActivity extends AppCompatActivity {
 			}
 		};
 
-		SimpleDraweeView draweeView = (SimpleDraweeView) this.findViewById(R.id.drawee_gif);
+		SimpleDraweeView draweeView = (SimpleDraweeView) this.findViewById(R.id.drawee_main);
 		DraweeController controller = Fresco.newDraweeControllerBuilder()
 				.setUri(Uri.parse(ImageApi.other.getUrlByName("does-not-have-this-url")))
 				.setControllerListener(controllerListener)

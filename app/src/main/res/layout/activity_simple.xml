@@ -5,6 +5,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context="me.kaede.frescosample.gif.GifActivity">
-        <com.facebook.drawee.view.SimpleDraweeView android:id="@+id/drawee_gif" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@+id/drawee_main" android:layout_width="match_parent" android:layout_height="match_parent"/>
 
 </RelativeLayout>

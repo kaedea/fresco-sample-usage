@@ -17,9 +17,9 @@ public class GifActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_gif);
+		setContentView(R.layout.activity_simple);
 
-		SimpleDraweeView draweeView = (SimpleDraweeView) this.findViewById(R.id.drawee_gif);
+		SimpleDraweeView draweeView = (SimpleDraweeView) this.findViewById(R.id.drawee_main);
 		DraweeController controller = Fresco.newDraweeControllerBuilder()
 				.setUri(Uri.parse(ImageApi.other.getUrlByName("animation",".gif")))
 				.setTapToRetryEnabled(true)

@@ -51,7 +51,7 @@ public class ImageHolder {
 		if (categroy!=null) sb.append("/").append(categroy);
 		if (prefix!=null) sb.append("/").append(prefix);else sb.append("/");
 		String url = sb.append(formatter.format(index)).append(extension).toString();
-		Log.v("ImageHolder","[getUrl] url = "+url);
+		Log.i("ImageHolder","[getUrl] url = "+url);
 		return url;
 	}
 
@@ -63,7 +63,7 @@ public class ImageHolder {
 		if (categroy!=null) sb.append("/").append(categroy);
 		if (prefix!=null) sb.append("/").append(prefix);else sb.append("/");
 		String url = sb.append(name).append(extension).toString();
-		Log.v("ImageHolder","[getUrlByName] url = "+url);
+		Log.i("ImageHolder", "[getUrlByName] url = " + url);
 		return url;
 	}
 
@@ -76,7 +76,7 @@ public class ImageHolder {
 		if (categroy!=null) sb.append("/").append(categroy);
 		if (prefix!=null) sb.append("/").append(prefix);else sb.append("/");
 		String url = sb.append(name).append(extension).toString();
-		Log.v("ImageHolder","[getUrlByName] url = "+url);
+		Log.i("ImageHolder","[getUrlByName] url = "+url);
 		return url;
 	}
 }
