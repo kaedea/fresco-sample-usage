@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import me.kaede.frescosample.R;
-import me.kaede.frescosample.RecyclerView.RecyclerViewActivity;
+import me.kaede.frescosample.recyclerview.RecyclerViewActivity;
 import me.kaede.frescosample.basicusage.BasicUsageActivity;
 import me.kaede.frescosample.gif.GifActivity;
 import me.kaede.frescosample.listener.ListenerActivity;

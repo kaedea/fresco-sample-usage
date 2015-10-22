@@ -1,4 +1,4 @@
-package me.kaede.frescosample.RecyclerView;
+package me.kaede.frescosample.recyclerview;
 
 import android.graphics.drawable.Animatable;
 import android.net.Uri;
@@ -98,6 +98,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 				.setTapToRetryEnabled(true)
 				.build();
 		holder.draweeView.setController(controller);
+		holder.itemView.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+			}
+		});
 	}
 
 	private float getTargetHeight(float width,float height,View view, String url){
