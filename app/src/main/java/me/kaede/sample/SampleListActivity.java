@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import me.kaede.frescosample.R;
+import me.kaede.frescosample.RecyclerView.RecyclerViewActivity;
 import me.kaede.frescosample.basicusage.BasicUsageActivity;
 import me.kaede.frescosample.gif.GifActivity;
 import me.kaede.frescosample.listener.ListenerActivity;
@@ -43,6 +44,7 @@ public class SampleListActivity extends AppCompatActivity {
         activityHolder.addActivity("Resize Image", ResizeActivity.class);
         activityHolder.addActivity("Postprocessor", PostprocessorActivity.class);
         activityHolder.addActivity("ListView", ListViewActivity.class);
+        activityHolder.addActivity("RecyclerView", RecyclerViewActivity.class);
         adapter.notifyDataSetChanged();
     }
 

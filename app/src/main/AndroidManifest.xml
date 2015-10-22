@@ -42,6 +42,9 @@
         </activity>
         <activity android:name=".listview.ListViewActivity">
         </activity>
+        <activity android:name=".RecyclerView.RecyclerViewActivity"
+                  android:theme="@style/NoActionBar">
+        </activity>
     </application>
 
 </manifest>
