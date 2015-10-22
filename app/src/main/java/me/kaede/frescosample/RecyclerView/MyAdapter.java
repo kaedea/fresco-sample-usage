@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.facebook.common.logging.FLog;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.controller.BaseControllerListener;
 import com.facebook.drawee.controller.ControllerListener;
@@ -30,6 +31,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 	List<String> datas = new ArrayList<>();
 	Map<String,Integer> heightMap = new HashMap<>();
+	static Map<String,Integer> widthMap = new HashMap<>();
 
 	public MyAdapter(int index) {
 		this.index = index;
@@ -57,9 +59,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 	public void onBindViewHolder(final ViewHolder holder, int position) {
 		final String url = getDatas().get(position);
 		if (heightMap.containsKey(url)){
-			updateItemtHeight(heightMap.get(url),holder.itemView);
-			holder.draweeView.setImageURI(Uri.parse(url));
-			return;
+			int height = heightMap.get(url);
+			FLog.i("kaede", url+ "'s height = " + height);
+			if (height>0){
+				updateItemtHeight(height,holder.itemView);
+				holder.draweeView.setImageURI(Uri.parse(url));
+				return;
+			}
+
 		}
 		ControllerListener controllerListener = new BaseControllerListener<ImageInfo>() {
 			@Override
@@ -69,7 +76,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 				}
 				QualityInfo qualityInfo = imageInfo.getQualityInfo();
 				if (qualityInfo.isOfGoodEnoughQuality()){
-					int heightTarget = (int) getTargetHeight(imageInfo.getWidth(),imageInfo.getHeight(),holder.itemView);
+					int heightTarget = (int) getTargetHeight(imageInfo.getWidth(),imageInfo.getHeight(),holder.itemView,url);
+					FLog.i("kaede", "heightTarget = " + heightTarget);
+					if (heightTarget<=0)return;
 					heightMap.put(url,heightTarget);
 					updateItemtHeight(heightTarget, holder.itemView);
 				}
@@ -91,9 +100,26 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 		holder.draweeView.setController(controller);
 	}
 
-	private float getTargetHeight(float width,float height,View view){
+	private float getTargetHeight(float width,float height,View view, String url){
 		View child = view.findViewById(R.id.draweeview);
-		float widthTarget = child.getWidth();
+		float widthTarget;
+		if (widthMap.containsKey(url)) widthTarget = widthMap.get(url);
+		else {
+			widthTarget = child.getMeasuredWidth();
+			if (widthTarget>0){
+				widthMap.put(url, (int) widthTarget);
+			}
+		}
+
+		FLog.i("kaede","child.getMeasuredWidth() = " + widthTarget);
+		/*int getWidth = child.getWidth();
+		int getMeasuredWidth = child.getMeasuredWidth();
+		int getLayoutParamsWidth = child.getLayoutParams().width;
+		if (getWidth==0||getMeasuredWidth==0||getLayoutParamsWidth==0){
+			FLog.i("kaede","child.getWidth() = " + getWidth);
+			FLog.i("kaede","child.getMeasuredWidth() = " + getMeasuredWidth);
+			FLog.i("kaede","child.getLayoutParams().width = " + getLayoutParamsWidth);
+		}*/
 		return height * (widthTarget /width);
 	}
 
