@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/frescosample/photoview/CustomGifView.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/frescosample/recyclerview/RecyclerViewFragment.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/frescosample/recyclerview/recyclerview/RecyclerViewFragment.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/CustomProgressbarDrawable.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/AndroidUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/CustomProgressDrawable.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/ImageDownloadListener.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/cache/FileCache.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/cache/FileUtils.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/photoview/HackyViewPager.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/widget/photoview/CustomProgressbarDrawable.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/widget/photoview/ImageDownloadListener.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/me/kaede/util/fresco/subscaleview" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/values-v21/attrs.xml" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

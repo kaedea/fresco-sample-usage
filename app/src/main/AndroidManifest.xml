@@ -46,7 +46,11 @@
                 android:name=".recyclerview.RecyclerViewActivity"
                 android:theme="@style/NoActionBar">
         </activity>
-        <activity android:name=".photoview.PhotoViewActivity"
+        <activity
+                android:name=".photoview.PhotoViewActivity"
+                android:theme="@style/NoActionBar">
+        </activity>
+        <activity android:name=".subsampling.SubsamplingActvity"
                   android:theme="@style/NoActionBar">
         </activity>
     </application>

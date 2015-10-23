@@ -15,7 +15,6 @@
  *******************************************************************************/
 package me.kaede.util.fresco.photoview;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -25,6 +24,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.widget.ImageView;
 
@@ -44,6 +44,7 @@ import com.facebook.imagepipeline.image.ImageInfo;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 
+import me.kaede.util.fresco.CustomProgressDrawable;
 import me.kaede.util.fresco.CustomProgressbarDrawable;
 import me.kaede.util.fresco.ImageDownloadListener;
 
@@ -92,8 +93,9 @@ public class PhotoView extends ImageView implements IPhotoView, ImageDownloadLis
         }
     }
 
-    public void setImageDownloadListener(ImageDownloadListener mDownloadListener) {
+    public PhotoView setImageDownloadListener(ImageDownloadListener mDownloadListener) {
         this.mDownloadListener = mDownloadListener;
+        return this;
     }
 
     /**
@@ -436,6 +438,7 @@ public class PhotoView extends ImageView implements IPhotoView, ImageDownloadLis
 
     @Override
     public void onUpdate(int progress) {
+        Log.i("PhotoView","[kaede][photoview] onUpdate progress = "+progress);
         if (mDownloadListener != null) {
             mDownloadListener.onUpdate(progress);
         }
