@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="me.kaede.frescosample.snippet.SnippetActivity">
-    <us.feras.mdv.MarkdownView
+    <me.kaede.widget.markdownview.MarkdownView
         android:id="@+id/markdownview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></us.feras.mdv.MarkdownView>
+        android:layout_height="match_parent"></me.kaede.widget.markdownview.MarkdownView>
 
 </RelativeLayout>

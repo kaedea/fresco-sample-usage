@@ -34,7 +34,7 @@ software, even if advised of the possibility of such damage.
 
 */
 
-package com.petebevin.markdown;
+package me.kaede.widget.markdownview.markdownprocessor;
 
 import java.util.Collection;
 import java.util.Map;

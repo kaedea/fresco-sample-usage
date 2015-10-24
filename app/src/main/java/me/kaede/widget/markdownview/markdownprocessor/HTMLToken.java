@@ -1,4 +1,4 @@
-package com.petebevin.markdown;
+package me.kaede.widget.markdownview.markdownprocessor;
 
 public class HTMLToken {
     private boolean isTag;

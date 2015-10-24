@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import me.kaede.frescosample.R;
-import us.feras.mdv.MarkdownView;
+import me.kaede.widget.markdownview.MarkdownView;
 
 public class SnippetActivity extends AppCompatActivity {
 

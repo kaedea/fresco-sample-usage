@@ -1,17 +1,17 @@
-package us.feras.mdv;
+package me.kaede.widget.markdownview;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import us.feras.mdv.util.HttpHelper;
+import me.kaede.widget.markdownview.util.HttpHelper;
 
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.AttributeSet;
 import android.webkit.WebView;
 
-import com.petebevin.markdown.MarkdownProcessor;
+import me.kaede.widget.markdownview.markdownprocessor.MarkdownProcessor;
 
 /**
  * @author Feras Alnatsheh

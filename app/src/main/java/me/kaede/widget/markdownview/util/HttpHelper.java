@@ -1,4 +1,4 @@
-package us.feras.mdv.util;
+package me.kaede.widget.markdownview.util;
 
 import java.io.IOException;
 import java.io.InputStream;
