@@ -43,13 +43,14 @@ public class PostprocessorActivity extends AppCompatActivity {
 			}
 		};
 
-		ImageRequest request = ImageRequestBuilder.newBuilderWithSource(Uri.parse(ImageApi.other.getUrlByName("lowres-small", ".jpg")))
+		Uri uri = Uri.parse(ImageApi.other.getUrlByName("lowres-small", ".jpg"));
+
+		ImageRequest request = ImageRequestBuilder.newBuilderWithSource(uri)
 				.setAutoRotateEnabled(true)
 				.setLocalThumbnailPreviewsEnabled(true)
 				.setProgressiveRenderingEnabled(false)
 				.setPostprocessor(redMeshPostprocessor)
 				.build();
-
 
 		DraweeController controller = Fresco.newDraweeControllerBuilder()
 				.setImageRequest(request)

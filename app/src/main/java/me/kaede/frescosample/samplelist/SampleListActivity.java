@@ -27,13 +27,14 @@ public class SampleListActivity extends AppCompatActivity {
     }
 
     public class MyAdapter extends FragmentStatePagerAdapter {
-        public String[] pagers = new String[]{"DraweeView","CustomView"};
+        public String[] pagers = new String[]{"DraweeView","CustomView","CodeSnippet"};
         public MyAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
         public Fragment getItem(int position) {
+            if (position==2)return SnippetFragment.newInstance();
             return SampleListFragment.newInstance(position);
         }
 

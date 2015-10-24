@@ -9,6 +9,6 @@
 
 ### Java code
     SimpleDraweeView draweeView = (SimpleDraweeView) findViewById(R.id.my_image_view);
-    draweeView.setImageURI(Uri.parse("https://raw.githubusercontent.com/facebook/fresco/gh-pages/static/fresco-logo.png"););
+    draweeView.setImageURI(Uri.parse("https://raw.githubusercontent.com/facebook/fresco/gh-pages/static/fresco-logo.png"));
 
 

@@ -44,7 +44,7 @@
             android:name=".subsampling.SubsamplingActvity"
             android:theme="@style/NoActionBar" />
         <activity android:name=".gifimageview.GifImageViewActivity" />
-        <activity android:name=".snippet.SnippetActivity"></activity>
+        <activity android:name=".snippet.SnippetActivity" android:label="Code Snippet"></activity>
     </application>
 
 </manifest>
