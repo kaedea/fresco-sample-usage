@@ -24,26 +24,27 @@
         <activity
             android:name=".basicusage.BasicUsageActivity"
             android:label="Basic Usage"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".gif.GifActivity"
-            android:label="Animation Image"></activity>
-        <activity android:name=".lowres.LowResActivity"></activity>
-        <activity android:name=".listener.ListenerActivity"></activity>
-        <activity android:name=".progressivejpg.ProgressiveJPGActivity"></activity>
-        <activity android:name=".resize.ResizeActivity"></activity>
-        <activity android:name=".postprocessor.PostprocessorActivity"></activity>
-        <activity android:name=".listview.ListViewActivity"></activity>
+            android:label="Animation Image" />
+        <activity android:name=".lowres.LowResActivity" />
+        <activity android:name=".listener.ListenerActivity" />
+        <activity android:name=".progressivejpg.ProgressiveJPGActivity" />
+        <activity android:name=".resize.ResizeActivity" />
+        <activity android:name=".postprocessor.PostprocessorActivity" />
+        <activity android:name=".listview.ListViewActivity" />
         <activity
             android:name=".recyclerview.RecyclerViewActivity"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".photoview.PhotoViewActivity"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".subsampling.SubsamplingActvity"
-            android:theme="@style/NoActionBar"></activity>
-        <activity android:name=".gifimageview.GifImageViewActivity"></activity>
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".gifimageview.GifImageViewActivity" />
+        <activity android:name=".snippet.SnippetActivity"></activity>
     </application>
 
 </manifest>

@@ -21,6 +21,7 @@ import me.kaede.frescosample.postprocessor.PostprocessorActivity;
 import me.kaede.frescosample.progressivejpg.ProgressiveJPGActivity;
 import me.kaede.frescosample.recyclerview.RecyclerViewActivity;
 import me.kaede.frescosample.resize.ResizeActivity;
+import me.kaede.frescosample.snippet.SnippetActivity;
 import me.kaede.frescosample.subsampling.SubsamplingActvity;
 
 /**
@@ -85,6 +86,7 @@ public class SampleListFragment extends Fragment{
 				activityHolder.addActivity("PhotoView", PhotoViewActivity.class);
 				activityHolder.addActivity("SubsamplingScaleImageView", SubsamplingActvity.class);
 				activityHolder.addActivity("GifImageView", GifImageViewActivity.class);
+				activityHolder.addActivity("SnippetActivity", SnippetActivity.class);
 				break;
 			case 2:
 				break;
