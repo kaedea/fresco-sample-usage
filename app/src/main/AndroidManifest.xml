@@ -1,58 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="me.kaede.frescosample">
+    package="me.kaede.frescosample">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-            android:name=".FrescoApplication"
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:supportsRtl="true"
-            android:theme="@style/AppTheme">
+        android:name=".FrescoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
         <activity
-                android:name=".samplelist.SampleListActivity"
-                android:theme="@style/NoActionBar">
+            android:name=".samplelist.SampleListActivity"
+            android:theme="@style/NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-                android:name=".basicusage.BasicUsageActivity"
-                android:label="Basic Usage"
-                android:theme="@style/NoActionBar">
-        </activity>
+            android:name=".basicusage.BasicUsageActivity"
+            android:label="Basic Usage"
+            android:theme="@style/NoActionBar"></activity>
         <activity
-                android:name=".gif.GifActivity"
-                android:label="Animation Image">
-        </activity>
-        <activity android:name=".lowres.LowResActivity">
-        </activity>
-        <activity android:name=".listener.ListenerActivity">
-        </activity>
-        <activity android:name=".progressivejpg.ProgressiveJPGActivity">
-        </activity>
-        <activity android:name=".resize.ResizeActivity">
-        </activity>
-        <activity android:name=".postprocessor.PostprocessorActivity">
-        </activity>
-        <activity android:name=".listview.ListViewActivity">
-        </activity>
+            android:name=".gif.GifActivity"
+            android:label="Animation Image"></activity>
+        <activity android:name=".lowres.LowResActivity"></activity>
+        <activity android:name=".listener.ListenerActivity"></activity>
+        <activity android:name=".progressivejpg.ProgressiveJPGActivity"></activity>
+        <activity android:name=".resize.ResizeActivity"></activity>
+        <activity android:name=".postprocessor.PostprocessorActivity"></activity>
+        <activity android:name=".listview.ListViewActivity"></activity>
         <activity
-                android:name=".recyclerview.RecyclerViewActivity"
-                android:theme="@style/NoActionBar">
-        </activity>
+            android:name=".recyclerview.RecyclerViewActivity"
+            android:theme="@style/NoActionBar"></activity>
         <activity
-                android:name=".photoview.PhotoViewActivity"
-                android:theme="@style/NoActionBar">
-        </activity>
-        <activity android:name=".subsampling.SubsamplingActvity"
-                  android:theme="@style/NoActionBar">
-        </activity>
+            android:name=".photoview.PhotoViewActivity"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".subsampling.SubsamplingActvity"
+            android:theme="@style/NoActionBar"></activity>
+        <activity android:name=".gifimageview.GifImageViewActivity"></activity>
     </application>
 
 </manifest>

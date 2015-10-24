@@ -21,7 +21,7 @@ public class GifActivity extends AppCompatActivity {
 
 		SimpleDraweeView draweeView = (SimpleDraweeView) this.findViewById(R.id.drawee_main);
 		DraweeController controller = Fresco.newDraweeControllerBuilder()
-				.setUri(Uri.parse(ImageApi.other.getUrlByName("animation",".gif")))
+				.setUri(Uri.parse(ImageApi.other.getUrlByName("animation2",".gif")))
 				.setTapToRetryEnabled(true)
 				.setAutoPlayAnimations(true)
 				.build();

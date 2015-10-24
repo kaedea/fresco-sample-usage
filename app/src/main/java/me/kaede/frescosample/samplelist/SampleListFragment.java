@@ -4,27 +4,24 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import me.kaede.frescosample.ImageApi;
+
 import me.kaede.frescosample.R;
 import me.kaede.frescosample.basicusage.BasicUsageActivity;
 import me.kaede.frescosample.gif.GifActivity;
+import me.kaede.frescosample.gifimageview.GifImageViewActivity;
 import me.kaede.frescosample.listener.ListenerActivity;
 import me.kaede.frescosample.listview.ListViewActivity;
 import me.kaede.frescosample.lowres.LowResActivity;
 import me.kaede.frescosample.photoview.PhotoViewActivity;
 import me.kaede.frescosample.postprocessor.PostprocessorActivity;
 import me.kaede.frescosample.progressivejpg.ProgressiveJPGActivity;
-import me.kaede.frescosample.recyclerview.MyAdapter;
 import me.kaede.frescosample.recyclerview.RecyclerViewActivity;
 import me.kaede.frescosample.resize.ResizeActivity;
 import me.kaede.frescosample.subsampling.SubsamplingActvity;
-
-import java.util.List;
 
 /**
  * Created by kaede on 2015/10/23.
@@ -87,6 +84,7 @@ public class SampleListFragment extends Fragment{
 			case 1:
 				activityHolder.addActivity("PhotoView", PhotoViewActivity.class);
 				activityHolder.addActivity("SubsamplingScaleImageView", SubsamplingActvity.class);
+				activityHolder.addActivity("GifImageView", GifImageViewActivity.class);
 				break;
 			case 2:
 				break;
