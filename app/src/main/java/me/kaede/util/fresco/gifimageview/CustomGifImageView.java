@@ -1,4 +1,4 @@
-package me.kaede.util.fresco.gifdrawableview;
+package me.kaede.util.fresco.gifimageview;
 
 import android.content.Context;
 import android.graphics.drawable.Animatable;
@@ -9,7 +9,6 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.facebook.common.references.CloseableReference;
 import com.facebook.datasource.DataSource;
@@ -38,37 +37,35 @@ import pl.droidsonroids.gif.GifImageView;
 /**
  * Created by 06peng on 15/6/28.
  */
-public class CustomGifView extends LinearLayout implements ImageDownloadListener {
+public class CustomGifImageView extends LinearLayout implements ImageDownloadListener {
 
     DraweeHolder<GenericDraweeHierarchy> mDraweeHolder;
+    ImageDownloadListener imageDownloadListener;
     private CloseableReference<PooledByteBuffer> bytes;
     private GifDrawable mGifDrawable;
     private GifImageView mGifView;
-    private TextView mProgressTextView;
 
-    public CustomGifView(Context context) {
+    public CustomGifImageView(Context context) {
         super(context);
         init(context);
     }
 
-    public CustomGifView(Context context, AttributeSet attrs) {
+    public CustomGifImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
-    public CustomGifView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomGifImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
     }
 
     private void init(Context context) {
-        View layout = LayoutInflater.from(context).inflate(R.layout.activity_gif, null);
+        View layout = LayoutInflater.from(context).inflate(R.layout.layout_gifimageview, null);
         setOrientation(LinearLayout.VERTICAL);
         LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         addView(layout, layoutParams);
         mGifView = (GifImageView) findViewById(R.id.gifview);
-
-        mProgressTextView = (TextView) findViewById(R.id.progress_text);
 
         if (mDraweeHolder == null) {
             GenericDraweeHierarchy hierarchy = new GenericDraweeHierarchyBuilder(getResources())
@@ -99,7 +96,7 @@ public class CustomGifView extends LinearLayout implements ImageDownloadListener
                                 mGifView.setImageDrawable(mGifDrawable);
                                 mGifView.setVisibility(View.VISIBLE);
 
-                                mProgressTextView.setVisibility(View.INVISIBLE);
+                                //mProgressTextView.setVisibility(View.INVISIBLE);
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -148,11 +145,14 @@ public class CustomGifView extends LinearLayout implements ImageDownloadListener
         mDraweeHolder.onAttach();
     }
 
+    public void setImageDownloadListener(ImageDownloadListener imageDownloadListener) {
+        this.imageDownloadListener = imageDownloadListener;
+    }
+
     @Override
     public void onUpdate(int progress) {
-        mProgressTextView.setText(progress + "%");
-        if (progress >= 100) {
-            mProgressTextView.setText("Handling GIF...");
+        if (imageDownloadListener !=null){
+            imageDownloadListener.onUpdate(progress);
         }
     }
 
