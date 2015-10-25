@@ -18,6 +18,7 @@ public class SampleListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recyclerview);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle(getResources().getString(R.string.app_name));
 
         TabLayout tabLayout = (TabLayout) this.findViewById(R.id.tablayout);
         ViewPager viewPager = (ViewPager) this.findViewById(R.id.viewpager);

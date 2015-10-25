@@ -14,6 +14,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".samplelist.SampleListActivity"
+            android:label="Fresco GO!"
             android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

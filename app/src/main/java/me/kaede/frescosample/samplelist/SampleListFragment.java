@@ -73,10 +73,10 @@ public class SampleListFragment extends Fragment{
 				activityHolder.addActivity("Basic Usage", BasicUsageActivity.class);
 				activityHolder.addActivity("Gif/WebP Animation Image", GifActivity.class);
 				activityHolder.addActivity("Low Resolution Image", LowResActivity.class);
-				activityHolder.addActivity("Controller Listener", ListenerActivity.class);
+				activityHolder.addActivity("Add Loading Listener", ListenerActivity.class);
 				activityHolder.addActivity("Progressive JPG Streaming", ProgressiveJPGActivity.class);
 				activityHolder.addActivity("Resize Image", ResizeActivity.class);
-				activityHolder.addActivity("Postprocessor", PostprocessorActivity.class);
+				activityHolder.addActivity("Use Postprocessor", PostprocessorActivity.class);
 				activityHolder.addActivity("Usage with ListView", ListViewActivity.class);
 				activityHolder.addActivity("Usage with RecyclerView", RecyclerViewActivity.class);
 
@@ -84,7 +84,7 @@ public class SampleListFragment extends Fragment{
 			case 1:
 				activityHolder.addActivity("PhotoView", PhotoViewActivity.class);
 				activityHolder.addActivity("SubsamplingScaleImageView", SubsamplingActvity.class);
-				activityHolder.addActivity("GifImageView", GifImageViewActivity.class);
+				activityHolder.addActivity("GifImageView & GifDrawable", GifImageViewActivity.class);
 				break;
 			case 2:
 				break;

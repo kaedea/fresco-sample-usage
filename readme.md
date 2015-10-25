@@ -25,3 +25,8 @@ This is an Android demo project created as **sample usage** for [Fresco](https:/
 - Customizable ways of loading
 
 ### Screenshot
+![01](doc/fresco-sample-01.jpg)
+
+![02](doc/fresco-sample-02.jpg)
+
+
