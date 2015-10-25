@@ -51,6 +51,7 @@ public class SnippetFragment extends Fragment{
 		datas.add(new CodeSnippet("Load an image simply", "loadanimage.md"));
 		datas.add(new CodeSnippet("Load an image in detail", "loadanimageindetail.md"));
 		datas.add(new CodeSnippet("XML Attributes","xmlattributes.md"));
+		datas.add(new CodeSnippet("DickCache Setting","diskcachesetting.md"));
 		adapter.notifyDataSetChanged();
 		return view;
 	}
