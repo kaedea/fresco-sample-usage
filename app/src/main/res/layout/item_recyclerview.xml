@@ -16,6 +16,7 @@
                                         android:id="@+id/cardview"
             >
         <com.facebook.drawee.view.SimpleDraweeView android:id="@+id/draweeview" android:layout_width="match_parent"
+            fresco:placeholderImage="@drawable/image_loading"
                                                    android:layout_height="150dp"/>
     </android.support.v7.widget.CardView>
     <Space android:layout_width="match_parent" android:layout_height="2dp"/>

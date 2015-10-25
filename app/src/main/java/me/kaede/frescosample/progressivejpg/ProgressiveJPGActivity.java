@@ -37,6 +37,7 @@ public class ProgressiveJPGActivity extends AppCompatActivity {
 		GenericDraweeHierarchyBuilder builder = new GenericDraweeHierarchyBuilder(getResources());
 		GenericDraweeHierarchy hierarchy = builder
 				.setProgressBarImage(new ProgressBarDrawable())
+				.setPlaceholderImage(getResources().getDrawable(R.drawable.image_loading))
 				.build();
 		draweeView.setHierarchy(hierarchy);
 	}
