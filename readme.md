@@ -1,5 +1,5 @@
 ### Fresco Sample Usage
-[中文版]() [日本語]()
+[中文版](doc/readme-cn.md) [日本語]()
 
 ### Introduction
 This is an Android demo project created as **sample usage** for [Fresco](https://github.com/facebook/fresco) in detail, which is an awesome **image loading library** for Android Application.
