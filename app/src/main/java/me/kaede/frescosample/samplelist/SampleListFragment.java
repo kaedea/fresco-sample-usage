@@ -72,13 +72,13 @@ public class SampleListFragment extends Fragment{
 			default:
 				activityHolder.addActivity("Basic Usage", BasicUsageActivity.class);
 				activityHolder.addActivity("Gif/WebP Animation Image", GifActivity.class);
-				activityHolder.addActivity("LowRes Image", LowResActivity.class);
+				activityHolder.addActivity("Low Resolution Image", LowResActivity.class);
 				activityHolder.addActivity("Controller Listener", ListenerActivity.class);
 				activityHolder.addActivity("Progressive JPG Streaming", ProgressiveJPGActivity.class);
 				activityHolder.addActivity("Resize Image", ResizeActivity.class);
 				activityHolder.addActivity("Postprocessor", PostprocessorActivity.class);
-				activityHolder.addActivity("ListView", ListViewActivity.class);
-				activityHolder.addActivity("RecyclerView", RecyclerViewActivity.class);
+				activityHolder.addActivity("Usage with ListView", ListViewActivity.class);
+				activityHolder.addActivity("Usage with RecyclerView", RecyclerViewActivity.class);
 
 				break;
 			case 1:
