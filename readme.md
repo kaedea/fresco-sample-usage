@@ -24,6 +24,8 @@ This is an Android demo project created as **sample usage** for [Fresco](https:/
 - Customizable  display of UI
 - Customizable ways of loading
 
+For more info, please go to [frescolib.org](http://frescolib.org/)
+
 ### Screenshot
 ![01](doc/fresco-sample-01.jpg)
 
