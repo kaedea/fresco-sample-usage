@@ -26,9 +26,14 @@ This is an Android demo project created as **sample usage** for [Fresco](https:/
 
 For more info, please go to [frescolib.org](http://frescolib.org/)
 
+### Download APK
+[GitHub Release](https://github.com/kaedea/Fresco-Sample-Usage/releases/tag/1.0)
+
 ### Screenshot
 ![01](doc/fresco-sample-01.jpg)
 
 ![02](doc/fresco-sample-02.jpg)
+
+
 
 
