@@ -26,7 +26,7 @@
 详细信息可以参考[frescolib.org](http://frescolib.org/)
 
 ### 下载 APK
-[GitHub Release](https://github.com/kaedea/Fresco-Sample-Usage/releases/tag/1.0)
+[GitHub Release](https://github.com/kaedea/Fresco-Sample-Usage/releases)
 
 ### 预览
 ![01](fresco-sample-01.jpg)
